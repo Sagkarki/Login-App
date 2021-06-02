@@ -11,12 +11,17 @@ input, button{
   outline: none;
 
 }
+
 .App{
   height: 100vh;
   display:flex;
   align-items: center;
   justify-content: center;
   background-color: #53565A;
+  background-image:  url(https://www.wshu.org/sites/wshu/files/202005/BridgeportCT_SeasidePark_PerryMemorialArch_Magicpianowc_200514.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }
 form{
   display: block;
