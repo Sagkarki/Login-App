@@ -11,22 +11,30 @@ function App() {
 
   const Login = details =>{
     console.log(details);
-  }
+
+  if (details.email == adminUser.email && details.password ==adminUser.password)
+  console.log("Logged in");
+  setUser({
+    name:details.name,
+    email: details.email
+  });
+}
+
    const Logout = () => {
-     console.log("Logout");
+     setUser({name: "", email:""});
    }
   return (
     <div className="App">
       {(user.email != "")? (
         <div className="Welcome">
         <h2>Welcome, <span>{user.name}</span></h2>
-        <button>Log out</button>
+        <button onClick={Logout}>Log out</button>
         </div>
       ):(
         <LoginForm Login={Login} error = {error}/>
       )}
    </div>
   );
-}
+   }
 
 export default App;
